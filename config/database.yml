@@ -1,0 +1,30 @@
+default: &default
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  
+
+development:
+  <<: *default
+  database: energy_drinks_dev
+  username: enbake
+  password: enbake
+test:
+  <<: *default
+  database: energy_drinks_test
+  username: enbake
+  password: enbake
+
+staging:
+  <<: *default
+  database: energy_drinks_stag
+  username: enbake
+  password: enbake
+
+production:
+  <<: *default
+  database: energy_drinks_prod
+  username: enbake
+  password: enbake
