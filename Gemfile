@@ -12,6 +12,7 @@ gem 'spring',        group: :development
 gem 'therubyracer', platforms: :ruby
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'carrierwave'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
