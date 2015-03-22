@@ -84,46 +84,23 @@
     </div>
   </div>
 </div>
+
 <div class="gray_block">
   <div class="container_12">
+  <% Notification.last(3).each do |noti| %>
     <div class="grid_4">
       <div class="block2">
-        <time datetime="2014-01-01"><span class="col1">18</span>january</time>
+        <time datetime="2014-01-01"><span class="col1"><%=noti.try(:created_at).try(:day)%></span><%=noti.try(:created_at).try(:strftime, "%B" )%></time>
         <div class="">
           <div class="extra_wrapper">
-            <div class="title col1"><a href="#">Etiam dui ero laoretsiter golyn</a></div>
+            <div class="title col1"><a href="#"><%=noti.news%></a></div>
           </div>
         </div>
         <div class="clear"> </div>
-        <p>Vivamus at magna non nunc tristiq oncus. Aliquam nibh ante, egestas id dicttuser</p>
+        <p><%=noti.message%></p>
         <a href="#" class="col1">read more</a>
       </div>
     </div>
-    <div class="grid_4">
-      <div class="block2">
-        <time datetime="2014-01-01"><span class="col1">21</span>january</time>
-        <div class="">
-          <div class="extra_wrapper">
-            <div class="title col1"><a href="#">Hom dui erosi laorufeiter milyno</a></div>
-          </div>
-        </div>
-        <div class="clear"> </div>
-        <p>Non nunc tristique ous. Aliqum nibh ante, egestas id dictumctuser liberoraesnt</p>
-        <a href="#" class="col1">read more</a>
-      </div>
-    </div>
-    <div class="grid_4">
-      <div class="block2">
-        <time datetime="2014-01-01"><span class="col1">12</span>february</time>
-        <div class="">
-          <div class="extra_wrapper">
-            <div class="title col1"><a href="#">Joui eros, laorulberer golyno</a></div>
-          </div>
-        </div>
-        <div class="clear"> </div>
-        <p>Vivamus at magna non nunc tristique os. Aliquam nibh ante, egestas id dicuser</p>
-        <a href="#" class="col1">read more</a>
-      </div>
-    </div>
+  <% end %>
   </div>
 </div>
