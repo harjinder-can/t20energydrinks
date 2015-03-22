@@ -1,8 +1,8 @@
 <div class="slider_wrapper">
   <div id="camera_wrap" class="">
-    <div data-src="images/slide.jpg"></div>
-    <div data-src="images/slide1.jpg"></div>
-    <div data-src="images/slide2.jpg"></div>
+  	<%Photo.all.each do |pho|%>
+  	  <div data-src="<%=pho.try(:avatar).try(:url)%>"></div>
+  	<% end %>
   </div>
 </div>
 <div class="container_12">
