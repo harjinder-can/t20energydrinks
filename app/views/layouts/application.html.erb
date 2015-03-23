@@ -11,11 +11,11 @@
     <%= stylesheet_link_tag    'menu.css'%>
     <%= stylesheet_link_tag    'reset.css'%>
     <%= stylesheet_link_tag    'style.css'%>
-    <%#= stylesheet_link_tag    'form.css'%>
+    <%= stylesheet_link_tag    'form.css'%>
     <%#= stylesheet_link_tag    'ie.css'%>
     <%#= stylesheet_link_tag    'ie1.css'%>
-    <%#= stylesheet_link_tag    'list.css'%>
-    <%#= stylesheet_link_tag    'touchTouch.css'%>
+    <%= stylesheet_link_tag    'list.css'%>
+    <%= stylesheet_link_tag    'touchTouch.css'%>
     <%= javascript_include_tag 'jquery.js'%>
     <%= javascript_include_tag 'jquery.ui.totop.js'%>
     <%= javascript_include_tag 'jquery-migrate-1.1.1.js'%>
@@ -24,14 +24,14 @@
     <%= javascript_include_tag 'jquery.mobile.customized.min.js'%>
     <%= javascript_include_tag 'camera.js'%>
     <%= javascript_include_tag 'snap.svg-min.js'%>
-    <%#= javascript_include_tag 'jquery.tabs.min.js'%>
-    <%#= javascript_include_tag 'html5shiv.js'%>
-    <%#= javascript_include_tag 'main.js'%>
-    <%#= javascript_include_tag 'forms.js'%>
-    <%#= javascript_include_tag 'map.js'%>
-    <%#= javascript_include_tag 'superfish.js'%>
-    <%#= javascript_include_tag 'TMForm.js'%>
-    <%#= javascript_include_tag 'touchTouch.jquery.js'%>
+    <%= javascript_include_tag 'jquery.tabs.min.js'%>
+    <%= javascript_include_tag 'html5shiv.js'%>
+    <%= javascript_include_tag 'main.js'%>
+    <%= javascript_include_tag 'forms.js'%>
+    <%= javascript_include_tag 'map.js'%>
+    <%= javascript_include_tag 'superfish.js'%>
+    <%= javascript_include_tag 'TMForm.js'%>
+    <%= javascript_include_tag 'touchTouch.jquery.js'%>
   	<script>
       $(document).ready(function(){
         jQuery('#camera_wrap').camera({
@@ -63,10 +63,10 @@
               <ul>
                 <li class="current bt-icon"><a href="/home">Home</a></li>
                 <li class="bt-icon"><a href="/about">About</a></li>
-                <li class="bt-icon"><a href="/services">Services</a></li>
-                <li class="bt-icon"><a href="/project">Projects</a></li>
-                <li class="bt-icon"><a href="/blog">Blog</a></li>
-                <li class="bt-icon"><a href="/contacts">Contacts</a></li>
+                <li class="bt-icon"><a href="/services">Distributers</a></li>
+                <li class="bt-icon"><a href="/project">Gallery</a></li>
+                <li class="bt-icon"><a href="/blog"></a>Blog</li>
+                <li class="bt-icon"><a href="/contacts">Contacts Us</a></li>
               </ul>
             </nav>
             <div class="clear"></div>
@@ -75,9 +75,9 @@
         </div>
       </div>
     </header>
-<%= yield %>
-
-<footer>
+    <%= yield %>
+    
+    <footer>
       <div class="container_12">
         <div class="grid_12">
           <div class="socials">

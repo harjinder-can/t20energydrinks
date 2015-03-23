@@ -247,7 +247,7 @@ header {
 	z-index: 999;
 	padding: 0px 0 0px;
 	border-top: 3px solid #a2cac2;
-	border-bottom: 3px solid #c3dcd7;
+	border-bottom: 3px solid #c3dcd7 !important;
 }
 
 .pt0 header {
@@ -308,13 +308,7 @@ h1 a img {
 
 
 .content {
-	padding-bottom: 156px;
-}
-
-.page1 .content {
-	padding-top: 99px;
-	padding-bottom: 96px;
-
+	padding-bottom: 50px;
 }
 
 
