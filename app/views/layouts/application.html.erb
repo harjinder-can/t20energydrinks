@@ -12,6 +12,7 @@
     <%= stylesheet_link_tag    'reset.css'%>
     <%= stylesheet_link_tag    'style.css'%>
     <%= stylesheet_link_tag    'form.css'%>
+    <%= stylesheet_link_tag    'magnific-popup.css'%>
     <%#= stylesheet_link_tag    'ie.css'%>
     <%#= stylesheet_link_tag    'ie1.css'%>
     <%= stylesheet_link_tag    'list.css'%>
@@ -29,8 +30,8 @@
     <%= javascript_include_tag 'main.js'%>
     <%= javascript_include_tag 'forms.js'%>
     <%= javascript_include_tag 'map.js'%>
-    <%= javascript_include_tag 'superfish.js'%>
     <%= javascript_include_tag 'TMForm.js'%>
+    <%= javascript_include_tag 'jquery.magnific-popup.min.js'%>
     <%= javascript_include_tag 'touchTouch.jquery.js'%>
   	<script>
       $(document).ready(function(){
@@ -63,9 +64,7 @@
               <ul>
                 <li class="current bt-icon"><a href="/home">Home</a></li>
                 <li class="bt-icon"><a href="/about">About</a></li>
-                <li class="bt-icon"><a href="/services">Distributers</a></li>
-                <li class="bt-icon"><a href="/project">Gallery</a></li>
-                <li class="bt-icon"><a href="/blog"></a>Blog</li>
+                <li class="bt-icon" style="margin-left: 80px; margin-right: 0px"><a href="/gallery">Gallery</a></li>
                 <li class="bt-icon"><a href="/contacts">Contacts Us</a></li>
               </ul>
             </nav>
@@ -94,14 +93,30 @@
     </footer>
     <script>
       $(document).ready(function(){
-       $(".bt-menu-trigger").toggle(
-        function(){
-        $('.bt-menu').removeClass('bt-menu-open');
-        },
-        function(){
-        $('.bt-menu').addClass('bt-menu-open');
-        }
-      );
+        $(".bt-menu-trigger").toggle(
+          function(){
+          $('.bt-menu').removeClass('bt-menu-open');
+          },
+          function(){
+          $('.bt-menu').addClass('bt-menu-open');
+          }
+        );
+        $('.test-popup-link').magnificPopup({
+          type: 'image',
+          gallery: {
+            enabled: true, // set to true to enable gallery
+          
+            preload: [0,2], // read about this option in next Lazy-loading section
+          
+            navigateByImgClick: true,
+          
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+          
+            tPrev: 'Previous (Left arrow key)', // title for left button
+            tNext: 'Next (Right arrow key)', // title for right button
+            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+          }
+        });
       });
       (function() {
       function init() {

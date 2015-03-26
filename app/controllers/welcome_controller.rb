@@ -4,16 +4,13 @@ class WelcomeController < ApplicationController
   
   def about
   end
-  
-  def services
-  end
-  
+
   def project
   end
-  
-  def blog
+
+  def contacts
   end
   
-  def contacts
+  def contact_form
   end
 end

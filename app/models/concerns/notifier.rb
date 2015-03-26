@@ -16,7 +16,7 @@ private
   def create_notification
     if(approve_changed?)
       if approve
-        Notification.find_or_create_by_trckable_type_and_trackable_id(self.class.to_s, self.id)
+        Notification.find_or_create_by_trackable_type_and_trackable_id(self.class.to_s, self.id)
       else
         Notification.where(:trackable => self).first.try(:destroy)
       end
