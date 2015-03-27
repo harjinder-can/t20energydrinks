@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   get "/about" => "welcome#about"
   get "/contacts" => "welcome#contacts"
   get "/gallery" => "welcome#gallery"
+  get "/updates" => "welcome#updates"
+  get "/team" => "welcome#team"
 
 end

@@ -1,0 +1,18 @@
+<div class="gray_block">
+  <div class="container_12">
+  <% @updates.each do |upd| %>
+    <div class="grid_12">
+      <div class="block2">
+        <time datetime="2014-01-01"><span class="col1"><%=upd.try(:created_at).try(:day)%></span><%=upd.try(:created_at).try(:strftime, "%B" )%></time>
+        <div class="">
+          <div class="extra_wrapper">
+            <div class="title col1"><a href="#"><%=upd.subject%></a></div>
+          </div>
+        </div>
+        <div class="clear"> </div>
+        <p><%=upd.message%></p>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

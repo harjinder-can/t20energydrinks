@@ -13,4 +13,13 @@ class WelcomeController < ApplicationController
   
   def contact_form
   end
+  
+  def team
+    @distributers = Distributer.where(:approve => true)
+    @members = Member.where(:approve => true)
+  end
+
+  def updates
+    @updates = Update.all
+  end
 end
