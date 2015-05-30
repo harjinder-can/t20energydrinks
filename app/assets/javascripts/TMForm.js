@@ -11,7 +11,7 @@
 					,invalidClass:'invalid'
 					,successClass:'success'
 					,onceVerifiedClass:'once-verified'
-					,mailHandlerURL:'/welcome/contact_form
+					,mailHandlerURL:'/welcome/contact_form'
 					,successShowDelay:'4000'
 					,stripHTML:true
 				},opt)
