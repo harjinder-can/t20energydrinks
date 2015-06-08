@@ -82,7 +82,7 @@
 #form label {
 	position:relative;
 	display: block;
-	min-height: 40px;
+	min-height: 10px;
 	float: left;
 	width: 194px;
 }

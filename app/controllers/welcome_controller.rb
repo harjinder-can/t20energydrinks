@@ -12,8 +12,9 @@ class WelcomeController < ApplicationController
   end
   
   def contact_form
-    ActionMailer::Base.mail(:to => AdminUser.all.map(&:email), :from => "harjindersidhu12@gmail.com",:subject => "Contact Request from #{params[:name]}", :body => params[:message]).deliver
-    render json: { status: "ok", message: "Sent Message"}
+    ActionMailer::Base.mail(:to => AdminUser.all.map(&:email), :from => "t20drinks.india@gmail.com",:subject => "Contact Request from #{params[:name]}", :body => params[:message]).deliver
+    flash[:notice] = "Message sent successfully."
+    redirect_to :back
   end
   
   def team
