@@ -3,9 +3,12 @@
   	<!-- <%#Photo.all.each do |pho|%>
   	  <div data-src="<%#=pho.try(:avatar).try(:url)%>"></div>
   	<%# end %> -->
-  	<div data-src="images/slide.jpg"></div>
+  	<%6.times.each do |num|%>
+  	  <div data-src=<%= "images/00#{num+1}.png" %>></div>
+  	<% end %>
+  	<!--<div data-src="images/slide.jpg"></div>
     <div data-src="images/slide1.jpg"></div>
-    <div data-src="images/slide2.jpg"></div>
+    <div data-src="images/slide2.jpg"></div>-->
   </div>
 </div>
 <div class="container_12">

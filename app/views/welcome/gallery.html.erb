@@ -1,6 +1,6 @@
 <div class="gray_block gb1">
 	<div class="container_12">
-	  <div class="grid_4" style="height: 200px; width: 300px">
+	  <!--<div class="grid_4" style="height: 200px; width: 300px">
       <div class="gallery">
 	      <a class= "test-popup-link" href="images/big1.jpg" ><img src="images/page4_img1.jpg" alt=""></a>
       </div>
@@ -39,14 +39,14 @@
       <div class="gallery">
 	      <a class= "test-popup-link" href="images/big8.jpg" ><img src="images/page4_img8.jpg" alt=""></a>
       </div>
-    </div>
+    </div>-->
 
-	    <!-- <%#Gallery.all.each do |pic|%>
-  	    <div class="grid_4" style="height: 200px; width: 300px">
+	    <%11.times.each do |num|%>
+  	    <div class="grid_4" style="height: 200px; width: 300px; margin-top: 10px">
           <div class="gallery">
-              <a class= "test-popup-link" href="<%#= root_url + pic.try(:avatar).try(:url) %>"><img src="<%#=pic.try(:avatar).try(:logo) %>" alt=""></a>
+              <a class= "test-popup-link" href=<%= "images/0#{num+1}.jpg"%>><img src=<%= "images/0#{num+1}.jpg" %> height="200px" width="300px" alt=""></a>
           </div>
         </div>
-		  <%#end%> -->
+		  <%end%>
 	</div>
 </div>
